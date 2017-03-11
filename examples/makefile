@@ -1,21 +1,53 @@
+.DEFAULT_GOAL := test
+
 FILES :=              \
     Hello             \
     Exceptions        \
     Types             \
     Operators         \
     Variables         \
+    Copy              \
     Cache
 
-%.pyx: %.py
-	coverage run --branch ./$<
-	coverage report -m
+ifeq ($(shell uname), Darwin)          # Apple
+    PYTHON   := python3.5
+    PIP      := pip3.5
+    PYLINT   := pylint
+    COVERAGE := coverage-3.5
+    PYDOC    := pydoc3.5
+    AUTOPEP8 := autopep8
+else ifeq ($(CI), true)                # Travis CI
+    PYTHON   := python3.5
+    PIP      := pip3.5
+    PYLINT   := pylint
+    COVERAGE := coverage-3.5
+    PYDOC    := pydoc3.5
+    AUTOPEP8 := autopep8
+else ifeq ($(shell uname -p), unknown) # Docker
+    PYTHON   := python3.5
+    PIP      := pip3.5
+    PYLINT   := pylint
+    COVERAGE := coverage-3.5
+    PYDOC    := pydoc3.5
+    AUTOPEP8 := autopep8
+else                                   # UTCS
+    PYTHON   := python3
+    PIP      := pip3
+    PYLINT   := pylint3
+    COVERAGE := coverage-3.5
+    PYDOC    := pydoc3.5
+    AUTOPEP8 := autopep8
+endif
 
-CommandLine.pyx: CommandLine.py
-	coverage run --branch ./CommandLine.py Nothing to be done.
-	coverage report -m
+.pylintrc:
+	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
+
+%.pyx: %.py .pylintrc
+	-$(PYLINT) $<
+	$(PYTHON) $<
 
 clean:
-	rm -f  .coverage
+	rm -f  .pylintrc
 	rm -f  *.pyc
 	rm -rf __pycache__
 
