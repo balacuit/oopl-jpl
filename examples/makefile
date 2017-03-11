@@ -1,33 +1,10 @@
 FILES :=              \
     Hello             \
-    UnitTests3        \
-    Coverage1         \
-    Coverage2         \
-    Coverage3         \
     Exceptions        \
     Types             \
     Operators         \
     Variables         \
-    Cache             \
-    Iteration         \
-    Yield             \
-    Lambda            \
-    Comprehensions    \
-    Iterables         \
-    CommandLine       \
-    FileInputOutput   \
-    FormattedOutput   \
-    FunctionKeywords  \
-    FunctionDefaults  \
-    FunctionUnpacking \
-    FunctionTuple     \
-    FunctionDict      \
-    Sequences         \
-    Lists             \
-    Strings           \
-    RegExps           \
-    Sets              \
-    Dicts
+    Cache
 
 %.pyx: %.py
 	coverage run --branch ./$<

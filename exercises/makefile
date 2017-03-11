@@ -1,14 +1,9 @@
 FILES :=            \
-    IsPrime1T       \
-    IsPrime2T       \
-    FactorialT      \
-    ReduceT         \
-    DigitsIteratorT \
-    DigitsT         \
-    MapT            \
-    RMSET           \
-    ComplexT        \
-    TheatreSquareT
+    UnitTests3T     \
+    Coverage1T      \
+    Coverage2T      \
+    Coverage3T      \
+    IsPrime1T
 
 %.pyx: %.py
 	coverage run --branch ./$<
