@@ -4,6 +4,7 @@
 # pylint: disable = invalid-name
 # pylint: disable = missing-docstring
 # pylint: disable = redefined-variable-type
+# pylint: disable = unused-import
 
 # ------------
 # Operators.py
@@ -12,6 +13,7 @@
 # https://docs.python.org/3.4/library/operator.html
 
 from operator import add
+from typing   import Tuple
 
 print("Operators.py")
 
@@ -54,11 +56,11 @@ assert j == 2
 assert isinstance(f, float)
 assert str(f) == "2.0"
 
-f =  4
+g =  4                      # type: float
 j =  2
-f /= j
-assert isinstance(f, float)
-assert str(f) == "2.0"
+g /= j
+assert isinstance(g, float)
+assert str(g) == "2.0"
 assert j      == 2
 
 i = 5
@@ -76,19 +78,19 @@ assert isinstance(i, int)
 assert i == 2
 assert j == 2
 
-i = 5.0
+f = 5.0
 j = 2
-k = i // j                  # floor division
-assert i == 5.0
+g = f // j                  # floor division
+assert f == 5.0
 assert j == 2
-assert isinstance(k, float)
-assert str(k) == "2.0"
+assert isinstance(g, float)
+assert str(g) == "2.0"
 
-i = 5.0
+f = 5.0
 j = 2
-i //= j
-assert isinstance(i, float)
-assert str(i) == "2.0"
+f //= j
+assert isinstance(f, float)
+assert str(f) == "2.0"
 assert j      == 2
 
 i = 12
@@ -224,30 +226,30 @@ l = 8
 assert (i < j) and (j < k) and (k < l)
 assert i < j < k < l
 
-a = True
-b = True
-c = False
-assert a and b
-assert not (a and c)
-assert a or b
-assert a or c
-assert a and b
-assert not (a and c)
+p = True
+q = True
+r = False
+assert p and q
+assert not (p and r)
+assert p or q
+assert p or r
+assert p and q
+assert not (p and r)
 
 a = [2, 3, 4]
 assert a[1] == 3 # list index
 a[1] += 1
 assert a[1] == 4
 
-a = (2, 3, 4)
-assert a[1] == 3 # tuple index
-#a[1] += 1       # TypeError: 'tuple' object does not support item assignment
+u = (2, 3, 4)    # type: Tuple
+assert u[1] == 3 # tuple index
+#u[1] += 1       # TypeError: 'tuple' object does not support item assignment
 
 s = "a"
 t = "bc"
-u = s + t             # string concatenation
-assert u is not "abc"
-assert u ==     "abc"
+v = s + t             # string concatenation
+assert v is not "abc"
+assert v ==     "abc"
 
 a = [2]
 b = [3, 4]
@@ -256,12 +258,12 @@ assert c is not [2, 3, 4]
 assert c ==     [2, 3, 4]
 assert c !=     (2, 3, 4)
 
-a = (2,)
-b = (3, 4)
-c = a + b                 # tuple concatenation
-assert c is not (2, 3, 4)
-assert c ==     (2, 3, 4)
-assert c !=     [2, 3, 4]
+u = (2,)
+v = (3, 4)
+w = (u + v)               # tuple concatenation
+assert w is not (2, 3, 4)
+assert w ==     (2, 3, 4)
+assert w !=     [2, 3, 4]
 
 s = "abc"
 t = 2 * s                # string replication
