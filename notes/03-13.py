@@ -58,7 +58,7 @@ pretend that Python doesn't have exceptions
 def f (...) :
     ...
     if (<something wrong>)
-        raise E(...)
+        raise Tiger(...)
     ...
 
 def g (...) :
@@ -67,18 +67,77 @@ def g (...) :
         ...
         x = f(...)
         ...
-    except G as e :
+    except Tiger as e :
+        ...
+        raise e
+    except Mammal as e :
         <something wrong>
+    else :
+        ...
+    finally :
+        ...
     ...
 
 ...
 g(...)
 ...
 
+"""
+Java:
 
+A x = new A(...);
+A y = new A(...);
 
+S.O.P(x == y);     // false
+S.O.P(x.equals(y); // true
+"""
 
+x = [2, 3.4, [5]]
+print(type(x))      # list
+x[0] = 5
+print(x)            # [5, 3.4, [5]]
+x += [6, 7]
+print(x)            # [5, 3.4, [5], 6, 7]
 
+x = (2, 3.4, [5])
+print(x)            # (2, 3.4, [5])
+print(type(x))      # tuple
+x[0]    = 5         # not ok
+x[2][0] = 6
+print(x)            # (2, 3.4, [6])
+
+x = [2]
+print(type(x)) # list
+print(len(x))  # 1
+
+x = (2)
+print(type(x)) # int
+print(len(x))  # not ok
+
+x = (2,)
+print(type(x)) # tuple
+print(len(x))  # 1
+
+print(type(list))  # type
+print(type(int))   # type
+print(type(tuple)) # type
+
+print(type(type))  # type
+
+x = list()
+print(type(x)) # list
+print(len(x))  # 0
+print(x)       # []
+
+x = tuple()
+print(type(x)) # tuple
+print(len(x))  # 0
+print(x)       # ()
+
+x = int()
+print(type(x)) # int
+print(len(x))  # not ok
+print(x)       # 0
 
 
 
