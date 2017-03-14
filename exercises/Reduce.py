@@ -13,7 +13,7 @@ def reduce_for_range(method: Callable([T,T], T),
 def reduce_for_enumerate(method, a, seed) -> int:
     """ Reduce by iterating over an enumeration.
     """
-    for i, item in enumerate(a):
+    for _, item in enumerate(a):
         seed = method(seed, item)
     return seed
 
