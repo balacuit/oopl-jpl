@@ -66,9 +66,14 @@ for k in d :                          # order not guaranteed
     s += k
 assert s == 9
 
-d = {2: "abc", 3: "def", 4: "ghi"}
+d = {2: "abc", 3: "def"}
 k = d.keys()
+l = d.keys()
+assert(k is not l)
 assert str(type(k)) == "<class 'dict_keys'>"
+assert set(k) == {2, 3}
+d[4] = "ghi"
+assert set(k) == {2, 3, 4}
 assert set(k) == {2, 3, 4}
 
 d = {2: "abc", 3: "def", 4: "ghi"}
@@ -105,7 +110,7 @@ try :
     assert False
 except IndexError :
     pass
-#x[0] = 2              # TypeError: 'xrange' object does not support item assignment
+#x[0] = 2              # TypeError: 'range' object does not support item assignment
 s = 0
 for v in x :
     s += v
