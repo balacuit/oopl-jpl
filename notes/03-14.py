@@ -81,64 +81,74 @@ Tuple's += operator takes a tuple on the right hand side
 Tuple's + operator takes a tuple on the right hand side
 """
 
+def reduce (bf, a: Sequence, v) :
+    for i in range(len(a)) :
+        w = a[i]
+        v = bf(v, w)
+    return v
 
+def reduce (bf, a: Iterable, v) :
+    for w in a :
+        v = bf(v, w)
+    return v
 
+for v in a :
+    ...
 
+for u, v in a :
+    ...
 
+class A :
+    def __iter__ (self) :
+        ...
 
+x = A()
+...__init__()...
 
+iter(x)
+x.__iter__()
 
+len(x)
+x.__len__()
 
+next(x)
+x.__next__()
 
+x[2]
+x.__getitem__(2)
 
+x(2, 3, 4)
+x.__call__(2, 3, 4)
 
+a = [2, 3, 4]
+print(a[i]) # 3
+a[i] = 5
+print(a)    # [2, 5, 4]
 
+a = [2, 3, 4]
+print(type(a)) # list
 
+p = iter(a)
+print(type(p)) # list iterator
+print(a is p)  # false
 
+q = iter(a)
+print(type(q)) # list iterator
+print(a is q)  # false
 
+print(p is q)  # false
 
+r = iter(p)
+print(p is r)  # true
 
+a = [2, 3, 4, ...]
+for v in a :
+    f(v)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+a = [2, 3, 4, ...]
+p = iter(a)
+f(next(p))   # the first  item
+f(next(p))   # the second item
+f(next(p))   # the third  item
+for v in p : # the rest of the items
+    g(v)
