@@ -9,19 +9,12 @@
 # Indexables.py
 # -------------
 
+from typing import List
+
 print("Iteration.py")
 
-a = [2, 3, 4]                     # list
+a = [2, 3, 4]                     # type: List
 assert isinstance(a, list)
-assert not hasattr(a, "__next__")
-assert     hasattr(a, "__iter__")
-s = 0
-for v in a :
-    s += v
-assert s == 9
-
-a = (2, 3, 4)                     # tuple
-assert isinstance(a, tuple)
 assert not hasattr(a, "__next__")
 assert     hasattr(a, "__iter__")
 s = 0
@@ -55,12 +48,12 @@ for u, _ in a :
     s += u
 assert s == 9
 
-a = {2, 3, 4}                     # set
-assert isinstance(a, set)
-assert not hasattr(a, "__next__")
-assert     hasattr(a, "__iter__")
+x = {2, 3, 4}                     # set
+assert isinstance(x, set)
+assert not hasattr(x, "__next__")
+assert     hasattr(x, "__iter__")
 s = 0
-for v in a :                      # order not guaranteed
+for v in x :                      # order not guaranteed
     s += v
 assert s == 9
 
