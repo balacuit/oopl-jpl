@@ -100,6 +100,12 @@ sync:
     --include "Variables.py"                 \
     --include "Copy.py"                      \
     --include "Cache.py"                     \
+    --include "Iteration.py"                 \
+    --include "Lambdas.py"                   \
+    --include "Comprehensions.py"            \
+    --include "Yield.py"                     \
+    --include "Iterables.py"                 \
+    --include "MyPy.py"                      \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
@@ -120,6 +126,9 @@ sync:
     --include "IsPrime2.py"                  \
     --include "IsPrime2T.py"                 \
     --include "FactorialT.py"                \
+    --include "ReduceT.py"                   \
+    --include "RMSET.py"                     \
+    --include "MapT.py"                      \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 

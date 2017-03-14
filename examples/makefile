@@ -7,7 +7,13 @@ FILES :=              \
     Operators         \
     Variables         \
     Copy              \
-    Cache
+    Cache             \
+    Iteration         \
+    Lambdas           \
+    Comprehensions    \
+    Yield             \
+    Iterables         \
+    MyPy
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
