@@ -1,32 +1,33 @@
 #!/usr/bin/env python3
-""" Reduce.py
+""" Implement Reduce in 4 ways.
 """
-def reduce_for_range(method, list_of_something, seed):
+def reduce_for_range(method: Callable([T,T], T),
+                     a: Sequence,
+                     seed: T) -> int:
     """ Reduce by iterating over a range.
     """
-    for i in range(len(list_of_something)):
-        seed = method(seed, list_of_something[i])
+    for i in range(len(a)):
+        seed = method(seed, a[i])
     return seed
 
-
-def reduce_for_enumerate(method, list_of_something, seed):
+def reduce_for_enumerate(method, a, seed) -> int:
     """ Reduce by iterating over an enumeration.
     """
-    for i, item in enumerate(list_of_something):
+    for i, item in enumerate(a):
         seed = method(seed, item)
     return seed
 
-def reduce_for(method, list_of_something, seed):
+def reduce_for(method, a, seed) -> int:
     """ Reduce by looping with a for.
     """
-    for i in list_of_something :
+    for i in a :
         seed = method(seed, i)
     return seed
 
-def reduce_while(method, list_of_something, seed):
+def reduce_while(method, a, seed) -> int:
     """ Reduce by looping with a while.
     """
-    i = iter(list_of_something)
+    i = iter(a)
     try:
         while True:
             seed = method(seed, next(i))
