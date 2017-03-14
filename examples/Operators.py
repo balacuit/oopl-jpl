@@ -247,9 +247,9 @@ assert u[1] == 3 # tuple index
 
 s = "a"
 t = "bc"
-v = s + t             # string concatenation
-assert v is not "abc"
-assert v ==     "abc"
+m = s + t             # string concatenation
+assert m is not "abc"
+assert m ==     "abc"
 
 a = [2]
 b = [3, 4]
@@ -259,7 +259,7 @@ assert c ==     [2, 3, 4]
 assert c !=     (2, 3, 4)
 
 u = (2,)
-v = (3, 4)
+v = (3, 4)                # type: Tuple
 w = (u + v)               # tuple concatenation
 assert w is not (2, 3, 4)
 assert w ==     (2, 3, 4)
@@ -275,9 +275,9 @@ b = 2 * a                          # list replication
 assert b is not [2, 3, 4, 2, 3, 4]
 assert b ==     [2, 3, 4, 2, 3, 4]
 
-a = (2, 3, 4)
-b = 2 * a                          # tuple replication
-assert b is not (2, 3, 4, 2, 3, 4)
-assert b ==     (2, 3, 4, 2, 3, 4)
+u = (2, 3, 4)
+v = 2 * u                          # tuple replication
+assert u is not (2, 3, 4, 2, 3, 4)
+assert v ==     (2, 3, 4, 2, 3, 4)
 
 print("Done.")
