@@ -139,15 +139,47 @@ print(type(x)) # int
 print(len(x))  # not ok
 print(x)       # 0
 
+def f (g, x, y, z) :
+    return g(x, y) + g(y, z)
 
+def plus (x, y) :
+    return x + y
 
+print(f(plus, 2, 3, 4)) # 12
+print(f(+,    2, 3, 4)) # not ok
+print(f(add,  2, 3, 4)) # 12
 
+print(f(lambda x, y : x + y, 2, 3, 4)) # 12
 
+i = 2
+j = 3
+k = (i + j)
+i + j       # not ok
+i = j
+k = (i = j) # not ok
+(i + j) = k # not ok
 
+# expressions can not standalone
+# must be used in something larger
 
+# statements can standalone
+# can not be in something larger
 
+i += j
+k = (i += j) # not ok
+(i += j) = k # ok in C++
 
+# unary
+~, -, not, *, **
 
+# binary
+=, +, +=, -, -+, *, *=, /, /=, %, %=, and, or
+
+# ternary
+if else
+
+# n-ary
+()
 
 
 
