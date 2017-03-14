@@ -6,7 +6,9 @@ FILES :=            \
     Coverage2T      \
     Coverage3T      \
     IsPrime1T       \
-    IsPrime2T
+    IsPrime2T       \
+    FactorialT      \
+    ReduceT
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
