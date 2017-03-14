@@ -36,4 +36,4 @@ def reduce_while(method, list_of_something, seed):
 
 if __name__ == "__main__" :
     from operator  import add, sub
-    reduce_while(sub, [2,3,4], 1)
+    print(reduce_while(sub, [2,3,4], 1))
