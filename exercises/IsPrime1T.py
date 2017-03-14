@@ -20,7 +20,7 @@ class MyUnitTests (TestCase) :
         self.assertFalse(is_prime(1))
 
     def test_02 (self) :
-        self.assertFalse(is_prime(2))
+        self.assertTrue(is_prime(2)) # 2 is prime
 
     def test_03 (self) :
         self.assertTrue(is_prime(3))
@@ -35,7 +35,7 @@ class MyUnitTests (TestCase) :
         self.assertTrue(is_prime(7))
 
     def test_09 (self) :
-        self.assertTrue(is_prime(9))
+        self.assertFalse(is_prime(9)) # 9 is not prime
 
     def test_27 (self) :
         self.assertFalse(is_prime(27))
