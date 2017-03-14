@@ -74,6 +74,7 @@ assert str(type(k)) == "<class 'dict_keys'>"
 assert set(k) == {2, 3}
 d[4] = "ghi"
 assert set(k) == {2, 3, 4}
+assert set(k) == {2, 3, 4}
 
 d = {2: "abc", 3: "def", 4: "ghi"}
 v = d.values()
