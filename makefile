@@ -135,7 +135,7 @@ sync:
     --include "MapT.py"                      \
     --include "RangeIteratorT.py"            \
     --include "RangeT.py"                    \
-    --include "ComplexT"                     \
+    --include "ComplexT.py"                  \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 
