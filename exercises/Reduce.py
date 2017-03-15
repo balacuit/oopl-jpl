@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
 from typing import Callable, Iterable, Sequence, TypeVar
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 def reduce_for_range(bf: Callable[[T, T], T], a: Sequence[T], v: T):

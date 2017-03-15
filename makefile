@@ -133,6 +133,7 @@ sync:
     --include "ReduceT.py"                   \
     --include "RMSE.py"                      \
     --include "RMSET.py"                     \
+    --include "Map.py"                       \
     --include "MapT.py"                      \
     --include "RangeIteratorT.py"            \
     --include "RangeT.py"                    \
