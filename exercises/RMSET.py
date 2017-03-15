@@ -34,8 +34,8 @@ class MyUnitTests (TestCase) :
             rmse_zip_map_sum,
             rmse_zip_list_sum,
             rmse_zip_generator_sum,
-            rmse_numpy]
-
+            rmse_numpy,
+            ]
     def test_1 (self) :
         for f in self.a :
             with self.subTest(msg=f.__name__) :
