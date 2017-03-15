@@ -106,6 +106,8 @@ sync:
     --include "Yield.py"                     \
     --include "Iterables.py"                 \
     --include "MyPy.py"                      \
+    --include "GlobalVariables.py"           \
+    --include "Classes.py"                   \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
@@ -131,6 +133,9 @@ sync:
     --include "ReduceT.py"                   \
     --include "RMSET.py"                     \
     --include "MapT.py"                      \
+    --include "RangeIteratorT.py"            \
+    --include "RangeT.py"                    \
+    --include "ComplexT"                     \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 
