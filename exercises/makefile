@@ -8,7 +8,8 @@ FILES :=            \
     IsPrime1T       \
     IsPrime2T       \
     FactorialT      \
-    ReduceT
+    ReduceT         \
+    RMSET
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5

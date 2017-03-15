@@ -12,8 +12,9 @@
 
 # https://docs.python.org/3.4/library/operator.html
 
+from typing import Tuple
+
 from operator import add
-from typing   import Tuple
 
 print("Operators.py")
 

@@ -13,7 +13,9 @@ FILES :=              \
     Comprehensions    \
     Yield             \
     Iterables         \
-    MyPy
+    MyPy              \
+    GlobalVariables   \
+    Classes
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
