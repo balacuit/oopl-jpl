@@ -98,7 +98,7 @@ class MyUnitTests (TestCase) :
         for c in self.a :
             with self.subTest() :
                 x = c(2, 3)
-                y = x.conjugate()              # y = A.conjugate(x)
+                y = x.conjugate()
                 self.assertEqual(x, c(2,  3))
                 self.assertEqual(y, c(2, -3))
 
