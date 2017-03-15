@@ -135,6 +135,7 @@ sync:
     --include "RMSET.py"                     \
     --include "Map.py"                       \
     --include "MapT.py"                      \
+    --include "RangeIterator.py"             \
     --include "RangeIteratorT.py"            \
     --include "RangeT.py"                    \
     --include "ComplexT.py"                  \
