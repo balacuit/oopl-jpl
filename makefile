@@ -148,6 +148,7 @@ sync:
     --include "RangeT.py"                    \
     --include "Complex.py"                   \
     --include "ComplexT.py"                  \
+    --include "Reduce2.py"                   \
     --include "Reduce2T.py"                  \
     --include "Map2T.py"                     \
     --include "ZipT.py"                      \

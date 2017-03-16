@@ -69,6 +69,32 @@ if you do NOT define ==, == becomes is
 <expr> if <cond> else <expr>
 """
 
+x = A(2)
+y = A(2)
+print(x is y) # false
+
+x = A
+y = A
+print(x is y) # true
+
+# three tokens: =, *, **
+# two contexts: function call, function definition
+
+print("abc", end=" ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
