@@ -8,7 +8,7 @@
 # Reduce2.py
 # ----------
 
-def reduce_while (bf, a, *v) :
+def reduce_1 (bf, a, *v) :
     if not a and not v :
         raise TypeError("reduce() of empty sequence with no initial value")
     p = iter(a)
@@ -16,21 +16,18 @@ def reduce_while (bf, a, *v) :
         v = v[0]
     else :
         v = next(p)
-    try :
-        while True :
-            v = bf(v, next(p))
-    except StopIteration :
-        pass
+    for w in p :
+        v = bf(v, w)
     return v
 
-def reduce_for (bf, a, *v) :
-    if not a and not v :
-        raise TypeError("reduce() of empty sequence with no initial value")
+def reduce_2 (bf, a, *v) :
     p = iter(a)
-    if v :
-        v = v[0]
-    else :
+    if not v :
+        if not a :
+            raise TypeError("reduce() of empty sequence with no initial value")
         v = next(p)
+    else :
+        v = v[0]
     for w in p :
         v = bf(v, w)
     return v
