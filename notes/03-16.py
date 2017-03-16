@@ -65,8 +65,9 @@ print(x == y) # print(x.__eq__(y)) # true
 if you do NOT define ==, == becomes is
 """
 
-
-
+"""
+<expr> if <cond> else <expr>
+"""
 
 
 
