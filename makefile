@@ -106,8 +106,15 @@ sync:
     --include "Yield.py"                     \
     --include "Iterables.py"                 \
     --include "MyPy.py"                      \
+    --include "FileInputOutput.py"           \
+    --include "FormattedOutput.py"           \
     --include "GlobalVariables.py"           \
     --include "Classes.py"                   \
+    --include "FunctionKeywords.py"          \
+    --include "FunctionDefaults.py"          \
+    --include "FunctionUnpacking.py"         \
+    --include "FunctionTuple.py"             \
+    --include "FunctionDict.py"              \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
@@ -140,6 +147,9 @@ sync:
     --include "Range.py"                     \
     --include "RangeT.py"                    \
     --include "ComplexT.py"                  \
+    --include "Reduce2T.py"                  \
+    --include "Map2T.py"                     \
+    --include "ZipT.py"                      \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 

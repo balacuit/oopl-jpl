@@ -18,6 +18,7 @@ def f () -> Iterator[int] :
     yield 4
 
 p = f()
+assert p is iter(p)
 n = next(p)
 assert n == 2
 n = next(p)
@@ -43,6 +44,7 @@ def g () -> Iterator[int] :
         yield v
 
 p = g()
+assert p is iter(p)
 n = next(p)
 assert n == 2
 n = next(p)
