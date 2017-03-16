@@ -69,35 +69,44 @@ v = next(p) # StopIteration
 # 1. as a class that reponds to __next__, __init___, __iter__
 # 2. as a function with yield
 
+m = map(...)
+print(list(m))
 
+x = range(2, 5)
+print(x)        # <range object at <addr>>
+v = next(x)     # not ok
+print(list(x))  # [2, 3, 4]
+print(list(x))  # [2, 3, 4]
 
+p = iter(x);
+print(x is p)   # false
 
+print(list(p))  # [2, 3, 4]
+print(list(p))  # []
 
+q = iter(p)
+print(p is q)   # true
 
+m = map(lambda..., [2, 3, 4])
 
+r = range_iterator(2, 5)
 
+class map_iterator :
+    def __init__ (self, uf, a) :
 
+class A :
+    class B :
+        def __init (self, j) :
+            self.j = j
 
+    def __init__ (self, i) :
+        self.i = i
 
+    def __iter__ (self) :
+        return A.B(3)
 
+x = A(2)
+print(type(x)) # A
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+y = x.g()
+print(type(y)) # A.B
