@@ -12,10 +12,10 @@ def reduce_1 (bf, a, *v) :
     if not a and not v :
         raise TypeError("reduce() of empty sequence with no initial value")
     p = iter(a)
-    if v :
-        v = v[0]
-    else :
+    if not v :
         v = next(p)
+    else :
+        v = v[0]
     for w in p :
         v = bf(v, w)
     return v
