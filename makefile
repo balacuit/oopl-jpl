@@ -106,6 +106,8 @@ sync:
     --include "Yield.py"                     \
     --include "Iterables.py"                 \
     --include "MyPy.py"                      \
+    --include "FileInputOutput.py"           \
+    --include "FormattedOutput.py"           \
     --include "GlobalVariables.py"           \
     --include "Classes.py"                   \
     --exclude "*"                            \
