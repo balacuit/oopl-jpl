@@ -53,6 +53,7 @@ class A :
         A.sm()
         self.sm()      # misleading
 
+# assert A.__cv == 0 # AttributeError: type object 'A' has no attribute '__cv'
 assert A._A__cv == 0 # mypy error: "A" has no attribute "_A__cv"
 
 A.cm()
@@ -60,11 +61,14 @@ A.sm()
 #A.im() # TypeError: im() missing 1 required positional argument: 'self'
 
 x = A()
+# assert x.__iv == 1 # AttributeError: 'A' object has no attribute '__iv'
 assert x._A__iv == 1 # mypy error: "A" has no attribute "_A__iv"; maybe "__iv"?
 x.cm()               # misleading
 x.sm()               # misleading
 
 x.im()
 A.im(x) # methods are really just functions
+
+m = map(A.im, [A(), A(), A()])
 
 print("Done.")

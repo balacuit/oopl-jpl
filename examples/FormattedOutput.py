@@ -14,12 +14,12 @@ print("FormattedOutput.py")
 
 pi = 3.14159
 
-s = "%7.2f" % pi # must be an object or a tuple
+s = "%7.2f" % pi          # must be an object or a tuple
 assert isinstance(s, str)
 assert s is not "   3.14"
 assert s ==     "   3.14"
 
-s = "%7.2f, %7.2f" % (pi, pi) # must be an object or a tuple
+s = "%7.2f, %7.2f" % (pi, pi)      # must be an object or a tuple
 assert isinstance(s, str)
 assert s is not "   3.14,    3.14"
 assert s ==     "   3.14,    3.14"
