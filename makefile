@@ -146,6 +146,7 @@ sync:
     --include "RangeIteratorT.py"            \
     --include "Range.py"                     \
     --include "RangeT.py"                    \
+    --include "Complex.py"                   \
     --include "ComplexT.py"                  \
     --include "Reduce2T.py"                  \
     --include "Map2T.py"                     \
