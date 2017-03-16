@@ -11,7 +11,8 @@ FILES :=            \
     ReduceT         \
     RMSET           \
     MapT            \
-    RangeIteratorT
+    RangeIteratorT  \
+    Range
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
