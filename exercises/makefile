@@ -12,7 +12,7 @@ FILES :=            \
     RMSET           \
     MapT            \
     RangeIteratorT  \
-    Range
+    RangeT
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
