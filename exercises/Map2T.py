@@ -26,14 +26,14 @@ class MyUnitTests (TestCase) :
 
     def test_1 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 x = f(lambda v : v ** 3, [2, 3])
                 self.assertEqual(list(x), [8, 27])
                 self.assertEqual(list(x), [])
 
     def test_2 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 x = f(lambda v, w : v ** w, (2, 3), (2, 3))
                 self.assertEqual(list(x), [4, 27])
                 self.assertEqual(list(x), [])
