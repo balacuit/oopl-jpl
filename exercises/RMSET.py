@@ -17,8 +17,8 @@ from RMSE import            \
     rmse_for_enumerate,     \
     rmse_iterator,          \
     rmse_map_sum,           \
-    rmse_zip_for,           \
     rmse_zip_map_sum,       \
+    rmse_zip_for,           \
     rmse_zip_list_sum,      \
     rmse_zip_generator_sum, \
     rmse_numpy
@@ -85,11 +85,11 @@ rmse_iterator
 rmse_map_sum
 431.37 milliseconds
 
-rmse_zip_for
-389.64 milliseconds
-
 rmse_zip_map_sum
 479.33 milliseconds
+
+rmse_zip_for
+389.64 milliseconds
 
 rmse_zip_list_sum
 347.12 milliseconds

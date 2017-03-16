@@ -61,6 +61,15 @@ def rmse_map_sum (a: Sequence[int], p: Sequence[int]) :
     v = sum(map(lambda x, y : (x - y) ** 2, a, p))
     return sqrt(v / len(a))
 
+def rmse_zip_map_sum (a: Sequence[int], p: Sequence[int]) :
+    assert len(a) == len(p)
+    v = 0
+    if not a :
+        return v
+    z = zip(a, p)
+    v = sum(map(lambda u : (u[0] - u[1]) ** 2, z))
+    return sqrt(v / len(a))
+
 def rmse_zip_for (a: Sequence[int], p: Sequence[int]) :
     assert len(a) == len(p)
     v = 0
@@ -70,15 +79,6 @@ def rmse_zip_for (a: Sequence[int], p: Sequence[int]) :
     v = 0
     for x, y in z :
         v += (x - y) ** 2
-    return sqrt(v / len(a))
-
-def rmse_zip_map_sum (a: Sequence[int], p: Sequence[int]) :
-    assert len(a) == len(p)
-    v = 0
-    if not a :
-        return v
-    z = zip(a, p)
-    v = sum(map(lambda u : (u[0] - u[1]) ** 2, z))
     return sqrt(v / len(a))
 
 def rmse_zip_list_sum (a: Sequence[int], p: Sequence[int]) :

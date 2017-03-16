@@ -147,6 +147,9 @@ sync:
     --include "Range.py"                     \
     --include "RangeT.py"                    \
     --include "ComplexT.py"                  \
+    --include "Reduce2T.py"                  \
+    --include "Map2T.py"                     \
+    --include "ZipT.py"                      \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 
