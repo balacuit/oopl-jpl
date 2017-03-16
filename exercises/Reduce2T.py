@@ -15,14 +15,14 @@ from operator  import add, sub
 from unittest  import main, TestCase
 
 from Reduce2 import \
-    reduce_while,   \
-    reduce_for
+    reduce_1,       \
+    reduce_2
 
 class MyUnitTests (TestCase) :
     def setUp (self) :
         self.a = [
-            reduce_while,
-            reduce_for,
+            reduce_1,
+            reduce_2,
             reduce]
 
     def test_1 (self) :
