@@ -150,7 +150,9 @@ sync:
     --include "ComplexT.py"                  \
     --include "Reduce2.py"                   \
     --include "Reduce2T.py"                  \
+    --include "Map2.py"                      \
     --include "Map2T.py"                     \
+    --include "Zip.py"                       \
     --include "ZipT.py"                      \
     --exclude "*"                            \
     ../../exercises/python/ exercises
