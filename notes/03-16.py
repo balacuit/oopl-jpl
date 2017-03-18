@@ -82,30 +82,4 @@ print(x is y) # true
 
 print("abc", end=" ")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+v = next(p) if not v else v[0]
